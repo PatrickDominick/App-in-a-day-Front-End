@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+
+    </div>
+    <form class="register-wrapper">
+        <input id="username-input" type="text" placeholder="Your Username">
+        <input id="password-input" type="text" placeholder="Your Password">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+<script>
+const registerNewUser = document.querySelector(".register-wrapper")
+registerNewUser.onsubmit = event => {
+    event.preventDefault()
+
+    const usernameInput = document.querySelector("#username-input")
+    const passwordInput = document.querySelector("#password-input")
+
+    const username = usernameInput.value
+    const password = passwordInput.value
+
+    fetch("http://127.0.0.1:5000/user/new", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+            username: username,
+            password: password
+        })
+    })
+    .then(response => response.json())
+    .catch(error => console.log("Error adding new user", error))
+
+}
+
+</script>
+</html>
