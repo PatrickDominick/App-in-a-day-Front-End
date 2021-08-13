@@ -16,7 +16,31 @@
             align-items: center;
         }
 
+        .body-wrapper .login-wrapper{
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            align-items: center;
+            justify-content: space-between;
+        }
         
+        .body-wrapper .login-wrapper .input-area {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #username-input {
+            margin: 10px;
+        }
+
+        #password-input {
+            margin: 10px;
+        }
+
+        #login-button {
+            margin: 10px;
+        }
 
     </style>
 
@@ -44,15 +68,17 @@
         </div>
 
         <div class="body-wrapper">
+            <div class="login-wrapper">
+                <div class="input-area">
+                    <input id="username-input" type="text" placeholder="Username">
+                    <input id="password-input" type="text" placeholder="Password">
+                </div>
 
-            <div class="button-wrapper">
-                <button id= "Login-button">Login</button>
+                <div class="button-wrapper">
+                    <button id= "login-button">Login</button>
+                    <a href="register.html">Register</button>
+                </div>
             </div>
-
-            <div class="text-area">
-                <input type="text">
-            </div>
-
         </div>
 
         <div class="footer-wrapper">
