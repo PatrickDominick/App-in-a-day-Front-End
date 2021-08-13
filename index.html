@@ -6,10 +6,11 @@
   <style>
     
     .master-wrapper{
-      width: 100vw;
-      height: 700px;
+      height: 1000px;
       display: flex;
       align-items: center;
+      background-image:linear-gradient(45deg, orange, black);
+
     }
 
     .master-wrapper .center-column {
@@ -19,20 +20,20 @@
       width: 100vw;
     }
 
-    .master-wrapper .right-column {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      margin-top: 10px;
-      margin-right: 30px;
-    }
-
     .master-wrapper .center-column button {
       width: 100;
       height: 50px;
+      background-color:bisque;
+      border-radius: 2px;
     }
     
-    
+    .master-wrapper .center-column h1 {
+      color:bisque;
+    }
+
+    .master-wrapper .center-column  {
+      color: black;
+    }
     
 
   </style>
@@ -40,17 +41,12 @@
 <body>
   <div class="master-wrapper">
 
-    <div class="heading-wrapper">
-
-      <div class="right-column">
-
-      </div>
-
       <div class="center-column">
 
         <h1>Welcome To Our game!</h1>
         <a href="login-page.html"><button>Click Here To Get Started</button></a>
-      </div>
+    </div>
+
 
 
 <script>
